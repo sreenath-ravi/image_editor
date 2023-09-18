@@ -42,13 +42,7 @@ def process_image(filename, operation):
 def hello_world():
     return render_template("index.html")
 
-@app.route("/About")
-def about():
-    return render_template("index.html")
 
-@app.route("/Contact")
-def contact():
-    return render_template("index.html")
 
 
 @app.route("/edit", methods = ["GET", "POST"])
@@ -74,4 +68,4 @@ def edit():
        
     return render_template("index.html")
 
-app.run(debug=True)
+app.run(debug=False, host='0.0.0.0')
